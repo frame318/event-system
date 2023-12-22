@@ -19,11 +19,13 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from projectmanager.views import HomePageView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('userprofile.urls')),
     path('', include('event.urls')),
+    path('', HomePageView.as_view(), name='home'),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
