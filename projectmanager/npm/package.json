@@ -1,0 +1,19 @@
+{
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tailwind build ../static/npm_static/input.css -o ../static/npm_static/output.css && cleancss -o ../static/npm_static/output.min.css ../static/npm_static/output.css",
+    "build-test": "tailwindcss -i ../static/npm_static/input.css -o ../static/npm_static/output.min.css --watch",
+    "build-alpine": "parcel build node_modules/alpinejs/dist/cdn.min.js --out-dir ../static/npm_static"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.10",
+    "clean-css-cli": "^5.6.3",
+    "flowbite": "^2.2.1",
+    "flowbite-typography": "^1.0.3",
+    "parcel-bundler": "^1.12.5",
+    "tailwindcss": "^3.4.1"
+  },
+  "dependencies": {
+    "alpinejs": "^3.13.5"
+  }
+}
